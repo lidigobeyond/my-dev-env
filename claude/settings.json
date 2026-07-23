@@ -1,0 +1,30 @@
+{
+  "model": "opus",
+  "enabledPlugins": {
+    "playwright@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true,
+    "code-review@claude-plugins-official": true,
+    "skill-creator@claude-plugins-official": true,
+    "warp@claude-code-warp": true,
+    "oh-my-claudecode@omc": true
+  },
+  "extraKnownMarketplaces": {
+    "claude-code-warp": {
+      "source": {
+        "source": "github",
+        "repo": "warpdotdev/claude-code-warp"
+      }
+    },
+    "omc": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/Yeachan-Heo/oh-my-claudecode.git"
+      }
+    }
+  },
+  "effortLevel": "high",
+  "tui": "fullscreen",
+  "autoMemoryEnabled": true,
+  "skipDangerousModePermissionPrompt": true,
+  "voiceEnabled": true
+}

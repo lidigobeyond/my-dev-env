@@ -36,3 +36,7 @@ git config core.ignorecase false
 # zsh
 chmod 755 ./zsh/install.sh
 ./zsh/install.sh
+
+# claude
+chmod 755 ./claude/install.sh
+./claude/install.sh
