@@ -32,3 +32,7 @@ chmod 755 ./node/install.sh
 # Change Git Default branch name
 git config --global init.defaultBranch main
 git config core.ignorecase false
+
+# zsh
+chmod 755 ./zsh/install.sh
+./zsh/install.sh

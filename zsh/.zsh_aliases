@@ -1,0 +1,15 @@
+alias k="kubectl"
+
+alias tfi='terraform init'
+alias tfa='terraform apply'
+alias tff='terraform fmt'
+
+alias kp='killport'
+
+alias cc='claude --allow-dangerously-skip-permissions'
+
+alias rsb1="ssh -i ~/.ssh/rasberry_pi -p 22 pi@192.168.0.3"
+alias rsb2="ssh -i ~/.ssh/rasberry_pi -p 22 pi@192.168.0.4"
+alias rsb3="ssh -i ~/.ssh/rasberry_pi -p 22 pi@192.168.0.5"
+alias rsb4="ssh -i ~/.ssh/rasberry_pi -p 22 pi@192.168.0.6"
+
