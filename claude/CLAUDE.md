@@ -63,3 +63,49 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 ---
 
 **These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
+
+# Ongoing Context About Me
+
+## Who I Am
+
+- I am 기현 김.
+- I am Korean.
+- I am backend engineer since 2021.
+
+## Main Technologies I Discuss Often
+
+### Backend
+
+- Typescript
+- Node.js
+- Nest.js
+- GraphQL API
+- REST API
+- TypeORM
+- MySQL
+- Redis
+- BigQuery
+- NX
+- Jest
+
+### Infrastructure / Platform
+
+- Google Cloud
+- Kubernetes (GKE)
+- Cloud Run
+- Cloud Functions
+- Compute Engine
+- Pub/Sub
+- Cloud Build
+- Cloud Scheduler
+- Terraform
+
+### Observability
+
+- Cloud Monitoring
+- Cloud Trace
+- Prometheus
+- Grafana
+- OpenTelemetry
+
+
