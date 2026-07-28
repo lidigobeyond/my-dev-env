@@ -1,11 +1,24 @@
 {
-  "model": "opus",
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
+  "permissions": {
+    "defaultMode": "acceptEdits"
+  },
+  "model": "opus[1m]",
+  
   "enabledPlugins": {
-    "playwright@claude-plugins-official": true,
     "superpowers@claude-plugins-official": true,
+    "github@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true,
+    "playwright@claude-plugins-official": true,
+    "ralph-loop@claude-plugins-official": true,
+    "feature-dev@claude-plugins-official": true,
     "code-review@claude-plugins-official": true,
+    "claude-md-management@claude-plugins-official": true,
     "skill-creator@claude-plugins-official": true,
     "oh-my-claudecode@omc": true,
+    "harness@harness-marketplace": true,
     "warp@claude-code-warp": true
   },
   "extraKnownMarketplaces": {
@@ -13,6 +26,12 @@
       "source": {
         "source": "git",
         "url": "https://github.com/Yeachan-Heo/oh-my-claudecode.git"
+      }
+    },
+    "harness-marketplace": {
+      "source": {
+        "source": "github",
+        "repo": "revfactory/harness"
       }
     },
     "claude-code-warp": {
