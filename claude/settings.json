@@ -6,7 +6,6 @@
     "defaultMode": "acceptEdits"
   },
   "model": "opus[1m]",
-  
   "enabledPlugins": {
     "superpowers@claude-plugins-official": true,
     "github@claude-plugins-official": true,
@@ -19,7 +18,8 @@
     "skill-creator@claude-plugins-official": true,
     "oh-my-claudecode@omc": true,
     "harness@harness-marketplace": true,
-    "warp@claude-code-warp": true
+    "warp@claude-code-warp": true,
+    "context7@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "omc": {
