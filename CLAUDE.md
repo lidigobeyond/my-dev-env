@@ -27,7 +27,7 @@ brew bundle --file=./Brewfile
 5. `zsh/install.sh` — `~/.zsh_aliases` 심볼릭 링크 생성 후 `~/.zshrc`에 source 구문 추가
 6. `claude/install.sh` — `~/.claude` 개인 설정 심볼릭 링크 + 플러그인 복원
 
-`claude/`는 Claude Code 전역 설정을 기기 간 동기화하기 위한 디렉터리다. `CLAUDE.md`, `settings.json`, `commands/`, `skills/`, `agents/`, `hooks/`를 `~/.claude/` 아래로 링크하며, 링크된 파일을 편집하면 곧바로 저장소에 반영된다. `settings.local.json`은 기기별 권한 allowlist라 의도적으로 제외한다. `claude/install.sh`는 멱등하고, 내용이 다른 파일을 만나면 덮어쓰지 않고 중단한다. `./claude/install.sh --check`로 아무것도 바꾸지 않고 상태만 점검할 수 있다.
+`claude/`는 Claude Code 전역 설정을 기기 간 동기화하기 위한 디렉터리다. `CLAUDE.md`, `settings.json`, `commands/`, `skills/`, `agents/`, `hooks/`, `statusline.sh`를 `~/.claude/` 아래로 링크하며, 링크된 파일을 편집하면 곧바로 저장소에 반영된다. `settings.local.json`은 기기별 권한 allowlist라 의도적으로 제외한다. `claude/install.sh`는 멱등하고, 내용이 다른 파일을 만나면 덮어쓰지 않고 중단한다. `./claude/install.sh --check`로 아무것도 바꾸지 않고 상태만 점검할 수 있다.
 
 링크 후에는 `settings.json`의 `extraKnownMarketplaces`와 `enabledPlugins`를 읽어 마켓플레이스 등록과 플러그인 설치를 복원한다. 목록을 스크립트에 하드코딩하지 않으므로 플러그인을 추가/제거해도 스크립트는 손댈 필요가 없다. 이미 설치된 항목은 건너뛰므로 평소 실행에서는 네트워크를 타지 않는다.
 
@@ -36,6 +36,8 @@ brew bundle --file=./Brewfile
 - **`settings.json`만으로는 부족하다.** 마켓플레이스 clone과 플러그인 코드는 `~/.claude/plugins/` 캐시에 있고 저장소에 담기지 않는다. 선언만 있고 캐시가 비면 `marketplace list`가 비어 있고 `install`도 `marketplace update`도 실패한다. 그래서 `marketplace add`부터 다시 해야 한다.
 - **기본 제공 마켓플레이스 `claude-plugins-official`은 로그인해야 등록된다.** 새 기기에서는 `claude`로 로그인한 뒤 `./claude/install.sh`를 다시 실행해야 공식 플러그인이 설치된다. 미등록 상태면 해당 플러그인을 건너뛰고 이유를 출력한다.
 - **`claude-plugins-official`을 직접 `marketplace add` 하지 말 것.** `extraKnownMarketplaces`에 불필요한 항목이 생기고 링크를 타고 저장소까지 역류한다. 스크립트도 이 이름은 등록 대상에서 제외한다.
+
+`claude/statusline.sh`는 [kcchien/claude-code-statusline](https://github.com/kcchien/claude-code-statusline)에서 가져온 vendored 파일이다(MIT). 서브모듈이 아니라 복사본이며, 출처와 커밋 해시는 파일 상단 주석에 있다. **직접 수정하지 말 것** — 업데이트는 upstream의 raw `statusline.sh`로 덮어쓰고 주석 블록을 다시 얹은 뒤 해시를 갱신하는 방식이다. `settings.json`의 `statusLine.command`가 `~/.claude/statusline.sh`(링크)를 가리키므로 저장소 경로가 기기마다 달라도 깨지지 않는다. 실행에 `jq`가 필요해 Brewfile에 넣어 뒀고, 없으면 스크립트가 조용히 `─ │ jq not found`로 떨어진다.
 
 `alfred/Alfred.alfredpreferences`는 Alfred 설정 번들을 통째로 커밋한 것이다. 개별 파일을 손대지 말고 Alfred가 쓴 결과를 그대로 커밋한다 (커밋 메시지 관례: `feat: sync alfred configuration`).
 

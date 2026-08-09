@@ -14,6 +14,7 @@ brew 'redis'
 brew 'mas'
 brew 'killport'
 brew 'tree'
+brew 'jq'
 
 cask 'google-chrome'
 cask 'notion'
@@ -29,6 +30,7 @@ cask 'visual-studio-code'
 cask 'shottr'
 cask 'openlens'
 cask 'multipass'
+cask 'font-d2coding'
 
 mas 'Slack', id: 803453959
 mas 'Magnet', id: 441258766

@@ -14,7 +14,7 @@ set -uo pipefail
 REPO_CLAUDE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 HOME_CLAUDE="$HOME/.claude"
 
-TARGETS=(CLAUDE.md settings.json commands skills agents hooks)
+TARGETS=(CLAUDE.md settings.json commands skills agents hooks statusline.sh)
 
 CHECK_ONLY=0
 [ "${1:-}" = "--check" ] && CHECK_ONLY=1
