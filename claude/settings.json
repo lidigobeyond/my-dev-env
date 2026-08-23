@@ -5,6 +5,7 @@
   "permissions": {
     "defaultMode": "auto"
   },
+  "model": "sonnet",
   "statusLine": {
     "type": "command",
     "command": "~/.claude/statusline.sh"
@@ -21,8 +22,9 @@
     "skill-creator@claude-plugins-official": true,
     "oh-my-claudecode@omc": true,
     "harness@harness-marketplace": true,
-    "warp@claude-code-warp": true,
-    "context7@claude-plugins-official": true
+    "context7@claude-plugins-official": true,
+    "fluent-korean@fluent-korean": true,
+    "eli5@claude-community": true
   },
   "extraKnownMarketplaces": {
     "omc": {
@@ -37,10 +39,16 @@
         "repo": "revfactory/harness"
       }
     },
-    "claude-code-warp": {
+    "fluent-korean": {
       "source": {
         "source": "github",
-        "repo": "warpdotdev/claude-code-warp"
+        "repo": "snflkd/fluent-korean"
+      }
+    },
+    "claude-community": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-plugins-community"
       }
     }
   },
@@ -48,6 +56,5 @@
   "tui": "fullscreen",
   "autoMemoryEnabled": true,
   "skipDangerousModePermissionPrompt": true,
-  "voiceEnabled": true,
-  "model": "sonnet"
+  "voiceEnabled": true
 }
