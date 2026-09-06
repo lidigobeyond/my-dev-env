@@ -5,7 +5,6 @@
   "permissions": {
     "defaultMode": "auto"
   },
-  "model": "sonnet",
   "statusLine": {
     "type": "command",
     "command": "~/.claude/statusline.sh"
@@ -56,5 +55,8 @@
   "tui": "fullscreen",
   "autoMemoryEnabled": true,
   "skipDangerousModePermissionPrompt": true,
-  "voiceEnabled": true
+  "agentPushNotifEnabled": false,
+  "voiceEnabled": true,
+  "model": "opus",
+  "outputStyle": "fluent-korean"
 }
