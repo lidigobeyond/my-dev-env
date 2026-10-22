@@ -39,8 +39,6 @@ brew bundle --file=./Brewfile
 
 `claude/statusline.sh`는 [kcchien/claude-code-statusline](https://github.com/kcchien/claude-code-statusline)에서 가져온 vendored 파일이다(MIT). 서브모듈이 아니라 복사본이며, 출처와 커밋 해시는 파일 상단 주석에 있다. **직접 수정하지 말 것** — 업데이트는 upstream의 raw `statusline.sh`로 덮어쓰고 주석 블록을 다시 얹은 뒤 해시를 갱신하는 방식이다. `settings.json`의 `statusLine.command`가 `~/.claude/statusline.sh`(링크)를 가리키므로 저장소 경로가 기기마다 달라도 깨지지 않는다. 실행에 `jq`가 필요해 Brewfile에 넣어 뒀고, 없으면 스크립트가 조용히 `─ │ jq not found`로 떨어진다.
 
-`alfred/Alfred.alfredpreferences`는 Alfred 설정 번들을 통째로 커밋한 것이다. 개별 파일을 손대지 말고 Alfred가 쓴 결과를 그대로 커밋한다 (커밋 메시지 관례: `feat: sync alfred configuration`).
-
 ## 변경 시 주의점
 
 - **Brewfile ↔ install.sh 연동**: cask를 추가/삭제하면 `install.sh`의 quarantine 해제 목록도 함께 갱신해야 한다. 둘은 자동 연결되지 않으며, 현재도 제거된 cask(webstorm, datagrip)의 quarantine 라인이 남아 있고 `/Applications/Chrome.app`처럼 실제 앱 이름(`Google Chrome.app`)과 어긋난 항목이 있다. **cask 이름이 아니라 `/Applications` 아래 실제 앱 이름**을 써야 한다.
@@ -50,4 +48,4 @@ brew bundle --file=./Brewfile
 
 ## 커밋 메시지
 
-Conventional Commits 접두사(`feat:`, `fix:`) + 한국어 설명. 예: `feat: shottr, openlens, multipass 추가`
+Conventional Commits 접두사(`feat:`, `fix:`, `chore:`, `docs:`) + 한국어 설명. 특정 디렉터리 변경이면 최상위 디렉터리명을 scope로 쓴다. 예: `feat(claude): cmux 스킬 추가`, `feat: shottr, openlens, multipass 추가`
