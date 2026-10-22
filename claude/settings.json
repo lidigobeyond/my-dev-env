@@ -5,6 +5,7 @@
   "permissions": {
     "defaultMode": "auto"
   },
+  "model": "opus",
   "statusLine": {
     "type": "command",
     "command": "~/.claude/statusline.sh"
@@ -51,12 +52,11 @@
       }
     }
   },
+  "outputStyle": "fluent-korean",
   "effortLevel": "high",
   "tui": "fullscreen",
   "autoMemoryEnabled": true,
   "skipDangerousModePermissionPrompt": true,
   "agentPushNotifEnabled": false,
-  "voiceEnabled": true,
-  "model": "opus",
-  "outputStyle": "fluent-korean"
+  "voiceEnabled": true
 }
