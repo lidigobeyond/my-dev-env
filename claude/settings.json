@@ -58,5 +58,12 @@
   "autoMemoryEnabled": true,
   "skipDangerousModePermissionPrompt": true,
   "agentPushNotifEnabled": false,
-  "voiceEnabled": true
+  "voiceEnabled": true,
+  "pluginConfigs": {
+    "cc-plugin-agents-md@builtin": {
+      "options": {
+        "instructionFiles": "claude-md-and-agents-md"
+      }
+    }
+  }
 }
